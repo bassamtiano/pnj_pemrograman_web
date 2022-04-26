@@ -1,0 +1,232 @@
+.sidebar {
+  float: left;
+  position: relative;
+  z-index: 1;
+  background: #011826;
+  height: 100vh;
+  width: 50px;
+}
+
+.sidebar .item {
+  font-weight: bold;
+  float: left;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+  padding: 8px;
+}
+
+.sidebar .item i {
+  float: left;
+  padding: 5px 10px 0 10px;
+  border-radius: 4px;
+}
+
+.sidebar .item i:hover {
+  background: #03588C;
+}
+
+.sidebar .item .title {
+  position: absolute;
+  z-index: 4;
+  background: blue;
+}
+
+.sidebar .item:hover .title {
+  background: red;
+}
+
+.menu-wrapper {
+  border-radius: 25px;
+  overflow: hidden;
+  max-height: 50px;
+  background: none;
+  right: 50px;
+  bottom: 50px;
+  position: fixed;
+  background: #023859;
+  color: white;
+  weight: bold;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrapper .menu-trigger {
+  padding: 18px 0;
+  font-size: 14px;
+  border-radius: 25px;
+  width: 50px;
+  text-align: center;
+  float: left;
+  line-height: 0;
+  background: #011826;
+  cursor: pointer;
+}
+
+.menu-wrapper:hover .menu-item {
+  width: 150px;
+}
+
+.menu-wrapper .menu-item {
+  float: left;
+  border-radius: 25px 0 0 25px;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  line-height: 0;
+}
+
+.menu-wrapper .menu-item .item-menu-circle {
+  padding: 18px 0;
+  font-size: 14px;
+  width: 50px;
+  float: left;
+  text-align: center;
+  border-radius: 25px 25px;
+  cursor: pointer;
+}
+
+.menu-wrapper .menu-item .item-menu-circle:hover {
+  background: #03588C;
+  border-radius: 25px;
+}
+
+@font-face {
+  font-family: "Anek_Odia";
+  src: url("../fonts/AnekOdia-VariableFont_wdth,wght.ttf");
+}
+
+.map {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  float: left;
+}
+
+body {
+  float: left;
+  width: 100%;
+  margin: 0;
+  font-family: "Anek_Odia";
+}
+
+.header {
+  margin: left;
+  padding: 10px;
+  background-color: white;
+}
+
+.wrapper {
+  float: left;
+  width: 600px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper .content {
+  width: calc(100% - 20px);
+  background: white;
+  float: left;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+}
+
+.wrapper .content#description-image {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+}
+
+.wrapper .content#description-image.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.wrapper .content#description-text {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+}
+
+.wrapper .content#description-text.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.wrapper .content .c-image {
+  padding: 0;
+  float: left;
+  max-height: 200px;
+  overflow-y: hidden;
+}
+
+.wrapper .content .c-image img {
+  width: 100%;
+  float: left;
+  border-radius: 5px 5px 0 0;
+}
+
+.wrapper .content .c-header {
+  width: calc(100% - 10px);
+  float: left;
+  background: #03588C;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.wrapper .content .c-header h3 {
+  float: left;
+  margin: 0;
+  margin: 10px 0 0 15px;
+}
+
+.wrapper .content .c-header i {
+  float: left;
+  margin-right: 10px;
+}
+
+.wrapper .content .c-body {
+  width: calc(100% - 20px);
+  float: left;
+  padding: 5px 10px 10px 10px;
+}
+
+.wrapper .content .c-body p {
+  padding: 0;
+  margin: 10px 15px 0 15px;
+}
+
+.wrapper .content .c-button {
+  width: calc(100% - 20px);
+  float: left;
+  cursor: pointer;
+}
+
+.wrapper .content .c-button a.button {
+  background: #e8e5e5;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  line-height: 0;
+  text-align: center;
+}
+
+.wrapper .content .c-button a.button i {
+  margin-right: 5px;
+}
+/*# sourceMappingURL=main.css.map */

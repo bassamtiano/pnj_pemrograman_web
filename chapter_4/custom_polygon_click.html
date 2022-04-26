@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="assets/map.css" /> -->
+    <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow:none;
+        }
+
+        .sidebar {
+            padding: 0;
+            margin: 0;
+            float:left;
+            background:#08070c;
+            width:80px;
+            height:100vh;
+            clear:both;
+            color:white;
+        }
+
+        #googleMap {
+            float:left;
+            width: calc(100% - 80px);
+            height:100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <span>
+            <i class="gg-shopping-cart"></i>
+        </span>
+    </div>
+    <div id="googleMap"></div>
+
+    <script>
+        var poly;
+        var map;
+
+        function myMap() {
+            const pnj = { lat: -6.371764, lng: 106.823781 }
+
+            map = new google.maps.Map(
+                document.getElementById("googleMap"), {
+                    zoom: 16, center: pnj,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN,
+                    mapTypeControl: false,
+                    zoomControl: false,
+                    streetViewControl: false,
+                    fullscreenControl: false,
+                }
+            );
+
+            poly = new google.maps.Polygon({
+                strokeColor: "#FF0000",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#FF0000",
+                fillOpacity: 0.35,
+            });
+
+            poly.setMap(map);
+            map.addListener('click', addLatLng);
+        }
+
+        function addLatLng(event) {
+            var path = poly.getPath();
+            if (path.length == 2) {
+                var polygonOptions = { path: path, strokeColor: "green", fillColor: "red" };
+                var polygon = new google.maps.Polygon(polygonOptions);
+                polygon.setMap(map);
+            }
+
+            path.push(event.latLng);
+            var index = -1;
+
+            function dragStartEvent(event) { const arr = path.getArray(); index = arr.indexOf(event.latLng);
+            }
+
+            function dragEndEvent(event) {
+                if (index > -1) {
+                    path.setAt(index, event.latLng);
+                }
+            }
+            var marker = new google.maps.Marker({
+                position: event.latLng, title: '#' + path.getLength(),
+                map: map, draggable: true,
+            });
+            marker.addListener('dragstart', dragStartEvent);
+            marker.addListener('dragend', dragEndEvent);
+        }
+
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_XbbI4Ujp7uRV-y3-rAwTNrouEajhVuY&callback=myMap">
+    </script>
+
+</body>
+
+</html>

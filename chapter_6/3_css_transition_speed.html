@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        .block {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+        }
+
+        .transition-linear { transition-timing-function: linear; }
+        .transition-ease { transition-timing-function: ease; }
+        .transition-ease-in { transition-timing-function: ease-in; }
+        .transition-ease-out { transition-timing-function: ease-out; }
+        .transition-ease-in-out { transition-timing-function: ease-in-out; }
+
+        .block:hover {
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="block transition-linear"></div>
+    <div class="block transition-ease"></div>
+    <div class="block transition-ease-in"></div>
+    <div class="block transition-ease-out"></div>
+    <div class="block transition-ease-in-out"></div>
+
+    
+</body>
+</html>

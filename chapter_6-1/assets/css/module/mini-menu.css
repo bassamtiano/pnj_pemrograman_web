@@ -1,0 +1,57 @@
+.menu-wrapper {
+  border-radius: 25px;
+  overflow: hidden;
+  max-height: 50px;
+  background: none;
+  right: 50px;
+  bottom: 50px;
+  position: fixed;
+  background: #023859;
+  color: white;
+  weight: bold;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrapper .menu-trigger {
+  padding: 18px 0;
+  font-size: 14px;
+  border-radius: 25px;
+  width: 50px;
+  text-align: center;
+  float: left;
+  line-height: 0;
+  background: #011826;
+  cursor: pointer;
+}
+
+.menu-wrapper:hover .menu-item {
+  width: 150px;
+}
+
+.menu-wrapper .menu-item {
+  float: left;
+  border-radius: 25px 0 0 25px;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  line-height: 0;
+}
+
+.menu-wrapper .menu-item .item-menu-circle {
+  padding: 18px 0;
+  font-size: 14px;
+  width: 50px;
+  float: left;
+  text-align: center;
+  border-radius: 25px 25px;
+  cursor: pointer;
+}
+
+.menu-wrapper .menu-item .item-menu-circle:hover {
+  background: #03588C;
+  border-radius: 25px;
+}
+/*# sourceMappingURL=mini-menu.css.map */

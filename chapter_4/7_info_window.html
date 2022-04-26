@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/map.css" />
+
+</head>
+
+<body>
+    <div id="googleMap"></div>
+
+    <script>
+        function myMap() {
+            const pnj = { lat: -6.371764, lng: 106.823781 }
+
+            var map = new google.maps.Map(
+                document.getElementById("googleMap"),
+                {
+                    zoom: 10,
+                    center: pnj,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN,
+                }
+            );
+
+            const contentString =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Politeknik Negeri Jakarta</h1>' +
+            '<div id="bodyContent">' +
+            "<p>" +
+            "Politeknik Negeri Jakarta" +
+            "</p>" +
+            "</div>" +
+            "</div>";
+
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
+
+            const marker = new google.maps.Marker({
+                position: pnj,
+                map: map, 
+                animation:google.maps.Animation.BOUNCE,
+                icon:'assets/icon.png',
+                title: "Here",
+            });
+
+            marker.addListener("click", () => {
+                infowindow.open({
+                    anchor: marker,
+                    map,
+                    shouldFocus: false,
+                })
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_XbbI4Ujp7uRV-y3-rAwTNrouEajhVuY&callback=myMap">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+    <div class="map" id="googleMap"></div>
+
+    <div class="sidebar">
+        <span class="item">
+            <i class="bi-pin-map"></i>
+        </span>
+        <span class="item" onclick="addDescription()">
+            <i class="bi bi-truck"></i>
+        </span>
+        <span class="item">
+            <i class="bi bi-person-fill"></i>
+        </span>
+    </div>
+
+    <div class="wrapper">
+        <div class="content show" id="description-text">
+            <div class="c-header">
+                <h3>
+                    <i class="bi bi-truck"></i>Shipping
+                </h3>
+            </div>
+            <div class="c-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse in hendrerit nibh. Aenean condimentum commodo tellus, mollis semper quam semper id. 
+                    Quisque hendrerit vehicula commodo. Cras scelerisque mauris sed diam semper egestas. 
+                    Donec luctus eget lorem id vulputate. 
+                    Aliquam enim orci, faucibus a dapibus et, ultricies in urna. 
+                    Sed imperdiet dolor at imperdiet malesuada.
+                </p>
+            </div>
+            <div class="c-button">
+                <a class="button" onclick="hideDescription()">
+                    <i class="bi bi-x"></i> Close
+                </a>
+            </div>
+        </div>
+
+        <div class="content" id="description-image">
+            <div class="c-image">
+                <img src="assets/image/pnj.jpg" alt="" srcset="">
+            </div>
+            <div class="c-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse in hendrerit nibh. Aenean condimentum commodo tellus, mollis semper quam semper id. 
+                    Quisque hendrerit vehicula commodo. Cras scelerisque mauris sed diam semper egestas. 
+                    Donec luctus eget lorem id vulputate. 
+                    Aliquam enim orci, faucibus a dapibus et, ultricies in urna. 
+                    Sed imperdiet dolor at imperdiet malesuada.
+                </p>
+            </div>
+            <div class="c-button">
+                <a class="button" onclick="hideImageDescription()">
+                    <i class="bi bi-x"></i> Close
+                </a>
+            </div>
+        </div>    
+    </div>
+
+    <div class="menu-wrapper">
+        <div class="menu-item">
+            <label class="item-menu-circle">
+                <i class="bi bi-file-person-fill"></i>
+            </label>
+            <label class="item-menu-circle">
+                <i class="bi bi-calendar-check"></i>
+            </label>
+            <label class="item-menu-circle">
+                <i class="bi bi-box-seam"></i>
+            </label>
+        </div>
+        <div class="menu-trigger">
+            <i class="bi bi-three-dots"></i>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="assets/js/map.js">
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_XbbI4Ujp7uRV-y3-rAwTNrouEajhVuY&callback=myMap">
+    </script>
+</body>
+</html>

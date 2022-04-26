@@ -1,0 +1,121 @@
+$animDuration: 3s;
+$animDelay: 2s;
+$animIter: 10s;
+
+.animation {
+    &.change-color {
+        animation-name: color_animation;
+        animation-duration: $animDuration;
+        background-color: green;
+    }
+
+    &.move {
+        background-color: green;
+        position: relative;
+        clear: both;
+
+        &.anim-color {
+            animation-name: move_color;
+            animation-duration: $animDuration;
+        }
+
+        &.anim-iteration {
+            animation-iteration-count: $animIter;
+        }
+        
+
+        &.anim-delay {
+            animation-delay: $animDelay;
+        }
+
+
+        &.anim-reverse {
+            animation-direction: reverse;
+        }
+
+        &.anim-alternate {
+            animation-iteration-count: $animIter;
+            animation-direction: alternate;
+        }
+
+        &.timing-linear {
+            position: relative;
+            animation: mymove $animDuration infinite;
+            animation-timing-function: linear;
+        }
+
+        &.timing-ease {
+            position: relative;
+            animation: mymove $animDuration infinite;
+            animation-timing-function: ease;
+        }
+
+        &.timing-ease-in {
+            position: relative;
+            animation: mymove $animDuration infinite;
+            animation-timing-function: ease-in;
+        }
+
+        &.timing-ease-out {
+            position: relative;
+            animation: mymove $animDuration infinite;
+            animation-timing-function: ease-out;
+        }
+
+        &.timing-ease-in-out {
+            position: relative;
+            animation: mymove $animDuration infinite;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    &.fill {
+
+        animation-name: color_move;
+        position: relative;
+
+        &.fill-forward {
+            animation-duration: $animDuration;
+            animation-fill-mode: forwards;
+        }
+
+        &.fill-backward {
+
+            animation-duration: $animDuration;
+            animation-delay: $animDelay;
+            animation-fill-mode: backwards;
+        }
+
+        &.fill-both {
+            animation-duration: $animDuration;
+            animation-fill-mode: both;
+        }
+    }
+
+    
+}
+
+
+
+@keyframes color_animation {
+    from {background:red;}
+    to {background:green;}
+}
+
+@keyframes move_color {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+@keyframes color_move {
+    from {top: 0px; background:red;}
+    to {top: 200px; background:blue;}
+}

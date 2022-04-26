@@ -1,0 +1,376 @@
+.animation.change-color {
+  -webkit-animation-name: color_animation;
+          animation-name: color_animation;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  background-color: green;
+}
+
+.animation.move {
+  background-color: green;
+  position: relative;
+  clear: both;
+}
+
+.animation.move.anim-color {
+  -webkit-animation-name: move_color;
+          animation-name: move_color;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.animation.move.anim-iteration {
+  -webkit-animation-iteration-count: 10s;
+          animation-iteration-count: 10s;
+}
+
+.animation.move.anim-delay {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.animation.move.anim-reverse {
+  animation-direction: reverse;
+}
+
+.animation.move.anim-alternate {
+  -webkit-animation-iteration-count: 10s;
+          animation-iteration-count: 10s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.animation.move.timing-linear {
+  position: relative;
+  -webkit-animation: mymove 3s infinite;
+          animation: mymove 3s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.animation.move.timing-ease {
+  position: relative;
+  -webkit-animation: mymove 3s infinite;
+          animation: mymove 3s infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+.animation.move.timing-ease-in {
+  position: relative;
+  -webkit-animation: mymove 3s infinite;
+          animation: mymove 3s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+.animation.move.timing-ease-out {
+  position: relative;
+  -webkit-animation: mymove 3s infinite;
+          animation: mymove 3s infinite;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.animation.move.timing-ease-in-out {
+  position: relative;
+  -webkit-animation: mymove 3s infinite;
+          animation: mymove 3s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.animation.fill {
+  -webkit-animation-name: color_move;
+          animation-name: color_move;
+  position: relative;
+}
+
+.animation.fill.fill-forward {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation.fill.fill-backward {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.animation.fill.fill-both {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes color_animation {
+  from {
+    background: red;
+  }
+  to {
+    background: green;
+  }
+}
+
+@keyframes color_animation {
+  from {
+    background: red;
+  }
+  to {
+    background: green;
+  }
+}
+
+@-webkit-keyframes move_color {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes move_color {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 300px;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 300px;
+  }
+}
+
+@-webkit-keyframes color_move {
+  from {
+    top: 0px;
+    background: red;
+  }
+  to {
+    top: 200px;
+    background: blue;
+  }
+}
+
+@keyframes color_move {
+  from {
+    top: 0px;
+    background: red;
+  }
+  to {
+    top: 200px;
+    background: blue;
+  }
+}
+
+.transform.translate {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.translate:hover {
+  -webkit-transform: translate(50px, 50px);
+          transform: translate(50px, 50px);
+}
+
+.transform.rotate-x {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.rotate-x:hover {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+}
+
+.transform.rotate-y {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.rotate-y:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.transform.rotate-z {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.rotate-z:hover {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
+.transform.scale {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.scale:hover {
+  -webkit-transform: scale(5);
+          transform: scale(5);
+}
+
+.transform.scale-x {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.scale-x:hover {
+  -webkit-transform: scaleX(3);
+          transform: scaleX(3);
+}
+
+.transform.scale-y {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.scale-y:hover {
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+
+.transform.skew {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.skew:hover {
+  -webkit-transform: skew(20deg, 10deg);
+          transform: skew(20deg, 10deg);
+}
+
+.transform.skew-x {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.skew-x:hover {
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+}
+
+.transform.skew-y {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.skew-y:hover {
+  -webkit-transform: skewY(20deg);
+          transform: skewY(20deg);
+}
+
+.transform.matrix {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.matrix:hover {
+  -webkit-transform: matrix(1, -0.3, 0, 1, 100, 100);
+          transform: matrix(1, -0.3, 0, 1, 100, 100);
+}
+
+.transform.translate3d {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.transform.translate3d:hover {
+  -webkit-transform: translate3d(90, 45, 30);
+          transform: translate3d(90, 45, 30);
+}
+
+.transform.rotate3d {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.transform.rotate3d:hover {
+  -webkit-transform: rotate3d(90, 45, 0, 45deg);
+          transform: rotate3d(90, 45, 0, 45deg);
+}
+
+.transform.scale3d {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.transform.scale3d:hover {
+  -webkit-transform: scale3d(2, 1, 0.5);
+          transform: scale3d(2, 1, 0.5);
+}
+
+body {
+  margin: 0;
+}
+
+body .rect {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin: 50px calc(50% - 50px);
+}
+/*# sourceMappingURL=main.css.map */

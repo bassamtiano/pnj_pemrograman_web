@@ -1,0 +1,140 @@
+.transform.translate {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.translate:hover {
+  -webkit-transform: translate(50px, 50px);
+          transform: translate(50px, 50px);
+}
+
+.transform.rotate-x {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.rotate-x:hover {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+}
+
+.transform.rotate-y {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.rotate-y:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.transform.rotate-z {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.rotate-z:hover {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
+.transform.scale {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.scale:hover {
+  -webkit-transform: scale(5);
+          transform: scale(5);
+}
+
+.transform.scale-x {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.scale-x:hover {
+  -webkit-transform: scaleX(3);
+          transform: scaleX(3);
+}
+
+.transform.scale-y {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.scale-y:hover {
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+
+.transform.skew {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.skew:hover {
+  -webkit-transform: skew(20deg, 10deg);
+          transform: skew(20deg, 10deg);
+}
+
+.transform.skew-x {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.skew-x:hover {
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+}
+
+.transform.skew-y {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.skew-y:hover {
+  -webkit-transform: skewY(20deg);
+          transform: skewY(20deg);
+}
+
+.transform.matrix {
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.transform.matrix:hover {
+  -webkit-transform: matrix(1, -0.3, 0, 1, 100, 100);
+          transform: matrix(1, -0.3, 0, 1, 100, 100);
+}
+
+.transform.translate3d {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.transform.translate3d:hover {
+  -webkit-transform: translate3d(90, 45, 30);
+          transform: translate3d(90, 45, 30);
+}
+
+.transform.rotate3d {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.transform.rotate3d:hover {
+  -webkit-transform: rotate3d(90, 45, 0, 45deg);
+          transform: rotate3d(90, 45, 0, 45deg);
+}
+
+.transform.scale3d {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.transform.scale3d:hover {
+  -webkit-transform: scale3d(2, 1, 0.5);
+          transform: scale3d(2, 1, 0.5);
+}
+/*# sourceMappingURL=transform.css.map */

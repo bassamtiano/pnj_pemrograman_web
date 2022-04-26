@@ -1,0 +1,16 @@
+@import "./module/animation";
+@import "./module/transform";
+
+body {
+    margin :0;
+
+    .rect {
+        height: 100px;
+        width: 100px;
+        background-color:red;
+
+        margin: 50px calc(50% - 50px);
+    }
+
+}
+

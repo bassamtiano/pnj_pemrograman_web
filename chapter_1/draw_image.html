@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="cat"  src="assets/cat.png" alt="The Scream">
+    <canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;"></canvas>
+    
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var img = new Image();
+        imageLoad(img, ctx);
+        function imageFromTag(ctx) {
+            window.onload = function () {
+                var img = document.getElementById("cat");
+
+                var img_w = img.width * 0.5;
+                var img_h = img.height * 0.5;
+                
+                ctx.drawImage(img, (canvas.width / 2) - (img_w / 2), (canvas.height / 2) - (img_h / 2), img_w, img_h);
+            };
+        }
+        function imageLoad(img, ctx) {
+            img.src = "assets/cat.png";
+            img.onload = function() {
+                var img_w = img.width * 0.5;
+                var img_h = img.height * 0.5;
+                
+                ctx.drawImage(img, (canvas.width / 2) - (img_w / 2), (canvas.height / 2) - (img_h / 2), img_w, img_h);
+            }
+        }
+    </script>
+
+    
+
+</body>
+
+</html>

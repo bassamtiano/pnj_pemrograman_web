@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/map.css" />
+
+</head>
+
+<body>
+    <div id="googleMap"></div>
+
+    <script>
+        function myMap() {
+            const pnj = { lat: 40.7128, lng: -73.935242 }
+
+            var map = new google.maps.Map(
+                document.getElementById("googleMap"),
+                {
+                    zoom: 10,
+                    center: pnj,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN,
+                    mapTypeControl: true,
+                    zoomControl: false,
+                    streetViewControl: false,
+                    fullscreenControl: false,
+
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                        mapTypeIds: ["roadmap", "terrain", "satellite"],
+                        position: google.maps.ControlPosition.TOP_CENTER
+                    },
+                }
+            );
+
+            const marker = new google.maps.Marker({
+                position: ny,
+                map: map, 
+                animation:google.maps.Animation.BOUNCE,
+                icon:'assets/icon.png',
+                
+            })
+
+            marker.setMap(map);
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_XbbI4Ujp7uRV-y3-rAwTNrouEajhVuY&callback=myMap">
+    </script>
+
+</body>
+
+</html>

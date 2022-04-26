@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/map.css" />
+
+</head>
+
+<body>
+    <div id="googleMap"></div>
+
+    <script>
+
+        const citymap = {
+            chicago: {
+                center: {
+                    lat: 41.878,
+                    lng: -87.629
+                },
+                population: 2714856,
+            },
+            newyork: {
+                center: {
+                    lat: 40.714,
+                    lng: -74.005
+                },
+                population: 8405837,
+            },
+        };
+
+        function myMap() {
+            const map = new google.maps.Map(
+                document.getElementById("googleMap"), {
+                    zoom: 4,
+                    center: {
+                        lat: 37.09,
+                        lng: -95.712
+                    },
+                    mapTypeId: "terrain",
+                }
+            );
+
+            for (const city in citymap) {
+                const cityCircle = new google.maps.Circle({
+                    strokeColor: "#FF0000",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#FF0000",
+                    fillOpacity: 0.35,
+                    map,
+                    center: citymap[city].center,
+                    radius: Math.sqrt(citymap[city].population) * 100,
+                });
+            }
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_XbbI4Ujp7uRV-y3-rAwTNrouEajhVuY&callback=myMap">
+    </script>
+
+    <script src="assets/js/circle.js"></script>
+
+</body>
+
+</html>

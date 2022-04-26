@@ -1,0 +1,45 @@
+Marker v
+1. Add Marker 
+2. Animate Marker
+3. Icon Marker
+
+Polyline v
+- Path
+- StrokeColor
+- StrokeOpacity
+- StrokeWeight
+- Editable
+
+Polygon v
+- Path
+- StrokeColor
+- StrokeOpacity
+- StrokeWeight
+- FillColor
+- FillOpacity
+
+Circle  v
+- Center
+- Radius
+- StrokeColor
+- StrokeOpacity
+- StrokeWeight
+- FillColor
+- FillOpacity
+- Editable
+
+InfoWindow v
+
+Map Events
+1 Click Marker to Zoom v
+2 Pan Back to Marker v
+3 Open Info Window When Clicking v
+4 Set Marker and Open Info Window for Each Marker
+
+Map Control Events
+1. Enabling and Disabling Control  v
+2. Modifying Control v
+
+Maps Types
+1. Basic Map Types
+2. Perspective View

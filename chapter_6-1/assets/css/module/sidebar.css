@@ -1,0 +1,38 @@
+.sidebar {
+  float: left;
+  position: relative;
+  z-index: 1;
+  background: #011826;
+  height: 100vh;
+  width: 50px;
+}
+
+.sidebar .item {
+  font-weight: bold;
+  float: left;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+  padding: 8px;
+}
+
+.sidebar .item i {
+  float: left;
+  padding: 5px 10px 0 10px;
+  border-radius: 4px;
+}
+
+.sidebar .item i:hover {
+  background: #03588C;
+}
+
+.sidebar .item .title {
+  position: absolute;
+  z-index: 4;
+  background: blue;
+}
+
+.sidebar .item:hover .title {
+  background: red;
+}
+/*# sourceMappingURL=sidebar.css.map */

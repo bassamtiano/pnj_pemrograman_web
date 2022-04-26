@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            background:blue;
+            width: 80px;
+            float:left;
+        }
+        
+        .triggers {
+            background: yellow;
+            width: 100%;
+            float:left;
+            padding: 10px 0;
+            text-align: center;
+            
+        }
+
+        .biodata-section {
+            background: red;
+            width: 80px;
+            height: 0;
+            float:left;
+            height: 0;
+            transition: height 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .biodata-section .isi-biodata {
+            background: green;
+            width:100%;
+            float:left;
+            height: 200px;
+
+        }
+
+        .triggers:hover ~ .biodata-section {
+            
+            height: 300px;
+        }
+
+        .biodata-section:hover {
+            height: 300px;
+        }
+        
+        .test-vertical {
+            width: 100px;   
+            height: 100px;
+            background: red;
+            transition: height 4s;
+        }
+
+        .test-vertical:hover {
+            height: 300px;
+        }
+
+
+        .triggers-move {
+            float:left;
+            padding: 10px;
+            background: green;
+            color:white;
+        }
+
+        .move-section {
+            float:left;
+            padding:10px;
+            background: gold;
+            height:100px;
+            transform: translateY(-160px);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .triggers-move:hover ~ .move-section {
+            transform: translateY(0px);
+        }
+
+        .move-section:hover {
+            transform: translateY(0px);
+        }
+
+        .menu-wrapper {
+            border-radius: 25px;
+            overflow:hidden;
+            max-height: 50px;                
+            background: none;
+            right: 50px;
+            bottom: 50px;
+            position: fixed;
+            background: rgb(74, 58, 167);
+
+            color: white;
+        }
+
+        .menu-wrapper .menu-trigger {
+            padding: 18px 0;
+            font-size: 14px;
+            border-radius: 25px;
+            background: green;
+            width: 50px;
+            text-align: center;
+            float: left;
+            
+        }
+
+        .menu-wrapper .menu-item {
+            float: left;
+            border-radius: 25px 0 0 25px;
+            padding:0;
+            margin:0;
+            width:0;
+            transition: width 1s ease-in-out;
+            background: rgb(74, 58, 167);
+        }
+
+        .menu-wrapper:hover > .menu-item {
+            width: 150px;
+            background: rgb(74, 58, 167);
+        }
+
+
+        .menu-wrapper .menu-item .item {
+            padding: 18px 0;
+            font-size: 14px;
+            width: 50px;
+            float:left;
+            text-align: center;
+        }
+
+        .menu-wrapper .menu-item .item:hover {
+            background:blue;
+            border-radius: 25px;
+        }
+
+        .test {
+            float:left;
+            width: 300px;
+            height: 300px;
+            background: gold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <label class="triggers">
+            Trigger
+        </label>
+
+        <div class="biodata-section">
+            Biodata
+
+            <div class="isi-biodata">
+                isi
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <label class="triggers-move">
+            Trigger
+        </label>
+
+        <div class="move-section">
+            Biodata
+
+            <div class="isi">
+                isi
+            </div>
+        </div>
+    </div>
+    <div class="menu-wrapper">
+        <div class="menu-item">
+            <label class="item">
+                <i class="bi-pin-map"></i>
+            </label>
+            <label class="item">
+                <i class="bi-pin-map"></i>
+            </label>
+            <label class="item">
+                <i class="bi-pin-map"></i>
+            </label>
+        </div>
+        <div class="menu-trigger">
+            <i class="bi-pin-map"></i>
+        </div>
+    </div>
+    
+    <div class="test">TEST</div>
+    <!-- <div class="test-vertical"></div> -->
+    
+    
+
+</body>
+</html>

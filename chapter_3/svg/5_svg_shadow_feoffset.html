@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <svg height="140" width="140">
+        <defs>
+            <filter id="f4" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="15" dy="15" />
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                    values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+                <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+        <g>
+            <path id="line" d="M 20,80 l 40,-60 l 40,60 Z" 
+            stroke="red" stroke-width="3" fill="yellow" filter="url(#f4)" />
+        </g>
+    </svg>
+</body>
+</html>

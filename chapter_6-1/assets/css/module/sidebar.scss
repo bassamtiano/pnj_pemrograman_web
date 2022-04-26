@@ -1,0 +1,40 @@
+.sidebar {
+    float: left;
+    position: relative;
+    z-index: 1;
+    background: #011826;
+    height: 100vh;
+    width:50px;
+    .item {
+        font-weight: bold;
+        float: left;
+        
+        cursor: pointer;
+
+        z-index: 2;
+        color: white;
+        padding: 8px;
+
+        i {
+            float: left;
+            padding : 5px 10px 0 10px;
+            border-radius: 4px;
+
+            &:hover {
+                background: #03588C;
+            }
+        }
+
+        .title {
+            position: absolute;
+            z-index: 4;
+            background: blue;
+        }
+
+        &:hover{
+            .title {
+                background:red;
+            }
+        }
+    }
+}

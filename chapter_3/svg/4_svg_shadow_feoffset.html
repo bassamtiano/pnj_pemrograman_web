@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <svg height="140" width="140">
+        <defs>
+            <filter id="f3" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+        <g>
+            <polygon points="60,20 110,100 10,100 
+            "style="fill:rgb(24, 124, 206);stroke:rgb(255, 190, 94);stroke-width:3" 
+            filter="url(#f3)"/>
+        </g>
+    </svg>
+</body>
+
+</html>

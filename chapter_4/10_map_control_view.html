@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/map.css" />
+
+</head>
+
+<body>
+    <div id="googleMap"></div>
+
+    <script>
+        function myMap() {
+            const ny = { lat: 40.7128, lng: -73.935242 }
+
+            var map = new google.maps.Map(
+                document.getElementById("googleMap"),
+                {
+                    zoom: 18,
+                    center: ny,
+                    mapTypeId: google.maps.MapTypeId.HYBRID,
+                    
+                }
+            );
+
+            const marker = new google.maps.Marker({
+                position: ny,
+                map: map, 
+                animation:google.maps.Animation.BOUNCE,
+                icon:'assets/icon.png',
+                title: "Here",
+            })
+
+            marker.setMap(map);
+            map.setTilt(45);
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_XbbI4Ujp7uRV-y3-rAwTNrouEajhVuY&callback=myMap">
+    </script>
+
+</body>
+
+</html>

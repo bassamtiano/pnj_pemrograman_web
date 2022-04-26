@@ -1,0 +1,104 @@
+.transform {
+    
+    &.translate {
+        transition: 2s ease-out;    
+        &:hover {
+            transform: translate(50px,50px);
+        }
+    }
+
+    &.rotate-x {
+        transition: 2s ease-out;
+        &:hover {
+            transform: rotateX(360deg);
+        }
+    }
+
+    &.rotate-y {
+        transition: 2s ease-out;
+        &:hover {
+            transform: rotateY(360deg);
+        }
+    }
+
+    &.rotate-z{
+        transition: 2s ease-out;
+        &:hover {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    &.scale {
+        transition: 2s ease-out;
+        &:hover {
+            transform: scale(5);
+        }
+    }
+
+    &.scale-x {
+        transition: 2s ease-out;
+        &:hover {
+            transform: scaleX(3);
+        }
+    }
+
+    &.scale-y {
+        transition: 2s ease-out;
+        &:hover {
+            transform: scaleY(0.5);
+        }
+    }
+
+    &.skew {
+        transition: 2s ease-out;
+        &:hover {
+            transform: skew(20deg, 10deg);
+        }
+    }
+    
+    &.skew-x {
+        transition: 2s ease-out;
+        &:hover {
+            transform: skewX(20deg);
+        }
+    }
+
+    &.skew-y {
+        transition: 2s ease-out;
+        &:hover {
+            transform: skewY(20deg);
+        }
+    }
+
+    &.matrix {
+        transition: 2s ease-out;
+        &:hover {
+            // Scale X, SkewY, SkewX, ScaleY, translateX, translateY
+            transform: matrix(1, -0.3, 0, 1, 100, 100);
+        }
+    }
+
+    &.translate3d {
+        transition: 1s ease-out;
+        &:hover {
+            // x, y, z
+            transform: translate3d(90, 45, 30);
+        }
+    }
+
+    &.rotate3d{
+        transition: 1s ease-out;
+        &:hover {
+            // x, y, z, derajat
+            transform: rotate3d(90, 45, 0, 45deg);
+        }
+    }
+
+    &.scale3d {
+        transition: 1s ease-out;
+        &:hover {
+            // skala x, skala y, skala z,
+            transform: scale3d(2, 1, 0.5);
+        }
+    }
+}
